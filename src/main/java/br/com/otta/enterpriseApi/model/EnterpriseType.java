@@ -21,8 +21,10 @@ public enum EnterpriseType {
         return id;
     }
     
-    public EnterpriseType findById(int id) {
-        return Arrays.stream(values()).filter(type -> type.getId() == id).findFirst().orElse(UNKNOWN);
+    public static EnterpriseType findById(int id) {
+        return Arrays.stream(values())
+                .filter(type -> type.getId() == id).findFirst()
+                .orElse(UNKNOWN);
     }
 
 }
